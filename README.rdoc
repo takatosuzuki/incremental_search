@@ -1,28 +1,25 @@
-== README
+== インクリメンタルサーチ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+検索した時、検索窓の下にリアルタイムで検索結果が表示される。
+- - -
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## やったこと
+- - -
+- url:    
+-- 読み込むページurl
+- type:   
+-- データ取得のためGET
+- data:   
+-- サーバーへ送信するデータ
+- keyup:  
+-- キーの操作が起きたとき
+- $.trim: 
+-- 文字列の先頭と末尾から、空白を除去します。
+- val():  
+-- value属性を返す
+- if(preInput !== input){:
+-- 検索窓の文字列が変更されたらという条件式にする
+- preFunc = setTimeout(ajaxSearch, 500);
+-- 入力時に毎回処理が発生しないようにする
+--- preFunc = null, 初期化
